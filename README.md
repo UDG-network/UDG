@@ -20,6 +20,6 @@ normal -> normal or focal represents focal loss or binary crossentropy loss
 0 -> which GPU to use
 ```
 
-# Note
+## Note
 
 Due to github's limitation on the size of uploaded files, we make a small sample of amazon dataset for code test only. If you want to train and inference on your own dataset, please pre-process the data according to the code requirements.
