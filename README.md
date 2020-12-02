@@ -2,7 +2,7 @@
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/deepctr.svg)](https://pypi.org/project/deepctr) [![TensorFlow Versions](https://img.shields.io/badge/TensorFlow-1.4+/2.0+-blue.svg)](https://pypi.org/project/deepctr)
 
-Most existing works ignore a fact that a fixed number of model parameters is difficult to model the diversified user interests well. User-dependent Gating (UDG) mechanismcan can transform the base model parameters dynamically based on the current user, the item to predict for, as well as the click history, and therefore can model the diversity of the user interests effectively.
+Most existing works ignore a fact that a fixed number of model parameters is difficult to model the diversified user interests well. User-dependent Gating (UDG) mechanism can transform the base model parameters dynamically based on the current user, the item to predict for, as well as the click history, and therefore can model the diversity of the user interests effectively.
 
 The code of this work is based on the open-source CTR models framework named [DeepCTR](https://github.com/shenweichen/DeepCTR).
 
