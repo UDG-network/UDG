@@ -156,25 +156,26 @@ for x in range(epoch):
     print("test AUC", auc_value) 
     print("test RMSE", rmse_value)
     print("test RIG", rig_value)
-    history.result['auc'] = auc_value
-    history.result['logloss'] = logloss_value
-    history.result['rmse'] = rmse_value
-    history.result['rig'] = rig_value
-    history_all[str(x)] = history.result
-    if auc_value > max_auc:
-        max_auc = auc_value
-        min_log = logloss_value
-        min_rmse = rmse_value
-        max_rig = rig_value
-    ticks = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    if sys.argv[1] not in ['DIEN', 'DIEN_UDG', 'DIN', 'DIN_UDG']:
-        model.save_weights("./trained_data/model/" + sys.argv[1] + "/" + sys.argv[2]+"/" + str(x) + "_" + 
-               str(auc_value) + "_" + str(logloss_value) + "_" + str(rmse_value) + "_" + str(rig_value) + '_' +
-                       ticks + ".h5")
-if sys.argv[1] not in ['DIEN', 'DIEN_UDG', 'DIN', 'DIN_UDG']:
-    with open('./trained_data/history/' + sys.argv[1] + "/" + sys.argv[2]+"/" + 
-               str(max_auc) + "_" + str(min_log) + "_" + str(min_rmse) + "_" + str(max_rig) + '_' +
-                           ticks, 'wb') as file_pi:
-        pickle.dump(history_all, file_pi)
+#    history.result['auc'] = auc_value
+#    history.result['logloss'] = logloss_value
+#    history.result['rmse'] = rmse_value
+#    history.result['rig'] = rig_value
+#    history_all[str(x)] = history.result
+#    if auc_value > max_auc:
+#        max_auc = auc_value
+#        min_log = logloss_value
+#        min_rmse = rmse_value
+#        max_rig = rig_value
+#    ticks = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+#    if sys.argv[1] not in ['DIEN', 'DIEN_UDG', 'DIN', 'DIN_UDG']:
+#        model.save_weights("./trained_data/model/" + sys.argv[1] + "/" + sys.argv[2]+"/" + str(x) + "_" + 
+#               str(auc_value) + "_" + str(logloss_value) + "_" + str(rmse_value) + "_" + str(rig_value) + '_' +
+#                       ticks + ".h5")
+#if sys.argv[1] not in ['DIEN', 'DIEN_UDG', 'DIN', 'DIN_UDG']:
+#    with open('./trained_data/history/' + sys.argv[1] + "/" + sys.argv[2]+"/" + 
+#               str(max_auc) + "_" + str(min_log) + "_" + str(min_rmse) + "_" + str(max_rig) + '_' +
+#                           ticks, 'wb') as file_pi:
+#        pickle.dump(history_all, file_pi)
+
     
  
