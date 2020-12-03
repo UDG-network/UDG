@@ -24,8 +24,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = sys.argv[6]
 epoch = 3
 
 if sys.argv[2] == 'movielens':
-    train = pd.read_csv('../dataset/ml-20m/a.csv')
-    test = pd.read_csv('../dataset/ml-20m/b.csv')
+    train = pd.read_csv('../dataset/ml-20m/train.csv')
+    test = pd.read_csv('../dataset/ml-20m/test.csv')
     if sys.argv[3] == 'w':
         sparse_features = ["itemId", "userId", "category", 'final_gender_code', 'age_level']
         dense_features = []
@@ -38,8 +38,8 @@ if sys.argv[2] == 'movielens':
         untrainable_features_columns = []
 
 elif sys.argv[2] == 'alimama':
-    train = pd.read_csv('../dataset/alimama/a.csv')
-    test = pd.read_csv('../dataset/alimama/b.csv')
+    train = pd.read_csv('../dataset/alimama/train.csv')
+    test = pd.read_csv('../dataset/alimama/test.csv')
 #     train = pd.read_csv('../dataset/alimama/train_small.txt')
 #     test = pd.read_csv('../dataset/alimama/test_small.txt')
     if sys.argv[3] == 'w':
@@ -59,8 +59,8 @@ elif sys.argv[2] == 'alimama':
         untrainable_features_columns = []
 
 elif sys.argv[2] == 'amazon':
-    train = pd.read_csv('../dataset/amazon/a.csv')
-    test = pd.read_csv('../dataset/amazon/b.csv')
+    train = pd.read_csv('../dataset/amazon/train.csv')
+    test = pd.read_csv('../dataset/amazon/test.csv')
     if sys.argv[3] == 'w':
         sparse_features = ["itemId", "userId", "category", 'final_gender_code', 'age_level']
         untrainable_features = ["category", 'final_gender_code', 'age_level']
